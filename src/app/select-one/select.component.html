@@ -1,0 +1,9 @@
+<select *ngIf="option=='city'" (change)="getCity($event)" class="form-select border-blue" id="exampleFormControlSelect1">
+<option selected>Select City</option>
+<option *ngFor="let city of cities" value="{{city}}">{{city}}</option>
+</select>
+
+<select *ngIf="selectedCity|async"  class="form-select border-blue" id="exampleFormControlSelect1">
+<option selected>Select Dist</option>
+<option *ngFor="let dist  of districts " value="{{dist}}">{{dist}}</option>
+</select>
